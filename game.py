@@ -81,10 +81,13 @@ while True:
         y = -1
         for i, row in enumerate(board):
             if row.count("O") == len(row)-1:
-                j = row.index(" ")
-                x = i
-                y = j
-                break
+                try:
+                    j = row.index(" ")
+                    x = i
+                    y = j
+                    break
+                except:
+                    pass
                 
         if x == -1 and y == -1:
             x = random.randint(0, len(board)-1)
