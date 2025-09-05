@@ -77,7 +77,8 @@ while True:
     if vsAI and player == "O":
         
         # Доповнення рядка O
-        x,y = -1
+        x = -1
+        y = -1
         for i, row in enumerate(board):
             if row.count("O") == len(row)-1:
                 j = row.index(" ")
