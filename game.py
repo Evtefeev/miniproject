@@ -1,7 +1,7 @@
 
 # Ігрове поле
 import random
-
+from colorama import Fore
 
 board = [
     [" ", " ", " "],
@@ -49,6 +49,16 @@ while True:
 
     if diagonal2.count("O") == len(diagonal2):
         victory = "O"
+
+
+
+    # Додавання кольору
+    if victory:
+        for i, row in enumerate(board):
+            for j, el in enumerate(row):
+                if el == victory:
+                    board[i][j] = Fore.GREEN + el + Fore.RESET
+                
 
     # Вивід поля
     line = "   ---------"
